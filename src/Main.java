@@ -6,11 +6,13 @@ public class Main {
                 3500, "07:34", "Белорусский вокзал", "Минск-Пассажирский", 0);
         Train leningradec = new Train( "Ленинградец", "D-125", 2019, "Россия", "зеленый", 270,
                 1700, "12:06", "Ленинградский вокзал", null, 19);
+        Bus maz = new Bus(25, "4 часа", 7);
 
         printInfoTransport(lada);
         printInfoTransport(kia);
         printInfoTrain(lastochka);
         printInfoTrain(leningradec);
+        printInfoBus(maz);
     }
 
     public static void printInfoTransport(Transport transport) {
@@ -35,5 +37,11 @@ public class Main {
                  ". Станция назначения - " + train.getTerminalStation() +
                  ". Количество вагонов в составе - " + train.getNumberWagons() + ".");
 
+    }
+
+    public static void printInfoBus(Bus bus) {
+        System.out.println("Количество мест - " + bus.getNumberSeats() +
+                ". Время в пути - " + bus.getArrivalTime() + " часов" +
+                ". Количество остановок в пути - " + bus.getNumberOfStops() + ".");
     }
 }
