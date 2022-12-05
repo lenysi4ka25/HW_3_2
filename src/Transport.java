@@ -1,4 +1,4 @@
-public class Transport {
+public abstract class Transport {
 
     protected String marka;
     protected String model;
@@ -7,7 +7,7 @@ public class Transport {
     protected String colour;
     protected int maxSpeed;
 
-    public Transport(String marka, String model, int yearOfProduction, String countryOfProduction, String colour, int maxSpeed) {
+    public Transport() {
         if (marka != null && !marka.isEmpty() && !marka.isBlank()) {
             this.marka = marka;
         } else {
@@ -32,9 +32,6 @@ public class Transport {
         }
     }
 
-    public Transport() {
-    super();
-    }
 
     public int getYearOfProduction() {
         return yearOfProduction;
@@ -91,4 +88,5 @@ public class Transport {
             this.maxSpeed = 200;
         }
     }
-    }
+    public abstract void refill();
+}

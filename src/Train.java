@@ -8,7 +8,7 @@ public class Train extends Transport {
 
     public Train(String marka, String model, int yearOfProduction, String countryOfProduction, String colour,
                  int maxSpeed, int costTrip, String travelTime, String departureStations, String terminalStation, int numberWagons) {
-        super(marka, model, yearOfProduction, countryOfProduction, colour, maxSpeed);
+        super();
         if (costTrip <= 0) {
             this.costTrip = 15;
         } else {
@@ -95,4 +95,9 @@ public class Train extends Transport {
             this.numberWagons = numberWagons;
         }
     }
-}
+
+    @Override
+    public void refill() {
+        System.out.println("Объекты класса train нужно заправлять дизелем.");
+    }
+    }

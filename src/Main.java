@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        Transport lada = new Transport("Лада", "Гранта", 2015, "Россия", "бежевый", 150);
-        Transport kia = new Transport("Дэу", "Нексия", 2022, "Узбекистан", "черный", 180);
+        Car lada = new Car("Лада", "Ларгус", 2020, "Россия", "зеленый", 160);
+        Car kia = new Car("Киа", "Рио", 2020, "Южная Корея", null, 195);
         Train lastochka = new Train("Ласточка", "В-901", 2001, "Россия", "красный", 301,
                 3500, "07:34", "Белорусский вокзал", "Минск-Пассажирский", 0);
         Train leningradec = new Train( "Ленинградец", "D-125", 2019, "Россия", "зеленый", 270,
@@ -13,6 +13,9 @@ public class Main {
         printInfoTrain(lastochka);
         printInfoTrain(leningradec);
         printInfoBus(maz);
+        lastochka.refill();
+        lada.refill();
+        maz.refill();
     }
 
     public static void printInfoTransport(Transport transport) {

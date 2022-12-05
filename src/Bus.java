@@ -5,13 +5,14 @@ public class Bus extends Transport {
     private int numberOfStops;
 
     public Bus(String marka, String model, int yearOfProduction, String countryOfProduction, String colour, int maxSpeed, int numberSeats, String arrivalTime, int numberOfStops) {
-        super(marka, model, yearOfProduction, countryOfProduction, colour, maxSpeed);
+        super();
         this.numberSeats = numberSeats;
         this.arrivalTime = arrivalTime;
         this.numberOfStops = numberOfStops;
     }
 
     public Bus(int numberSeats, String arrivalTime, int numberOfStops) {
+        super();
         this.numberSeats = numberSeats;
         this.arrivalTime = arrivalTime;
         this.numberOfStops = numberOfStops;
@@ -36,5 +37,10 @@ public class Bus extends Transport {
 
     public void setNumberOfStops(int numberOfStops) {
         this.numberOfStops = numberOfStops;
+    }
+
+    @Override
+    public void refill() {
+        System.out.println("Объекты класса bus можно заправлять бензином или дизелем на заправке.");
     }
 }
