@@ -1,14 +1,19 @@
 public class Main {
-    public static void main(String[] args)
-    {
-        Transport lada = new Transport ("Лада", "Ларгус", 2020, "Россия", "зеленый", 160);
-        Transport kia = new Transport("Киа", "Рио", 2020, "Южная Корея", null, 195);
+    public static void main(String[] args) {
+        Transport lada = new Transport("Лада", "Гранта", 2015, "Россия", "бежевый", 150);
+        Transport kia = new Transport("Дэу", "Нексия", 2022, "Узбекистан", "черный", 180);
+        Train lastochka = new Train("Ласточка", "В-901", 2001, "Россия", "красный", 301,
+                3500, "07:34", "Белорусский вокзал", "Минск-Пассажирский", 11);
+        Train leningradec = new Train( "Ленинградец", "D-125", 2019, "Россия", "зеленый", 270,
+                1700, "12:06", "Ленинградский вокзал", null, 0);
 
-    printInfoTransport(lada);
-    printInfoTransport(kia);
+        printInfoTransport(lada);
+        printInfoTransport(kia);
+        printInfoTrain(lastochka);
+        printInfoTrain(leningradec);
     }
 
-    private static void printInfoTransport(Transport transport) {
+    public static void printInfoTransport(Transport transport) {
         System.out.println("Марка - " + transport.getMarka() +
                 ". Модель - " + transport.getModel() +
                 ". Год выпуска - " + transport.getYearOfProduction() +
@@ -16,4 +21,19 @@ public class Main {
                 ". Цвет - " + transport.getColour() +
                 ". Максимальная скорость - " + transport.getMaxSpeed() + " км./ч.");
     }
+
+    public static void printInfoTrain(Train train) {
+        System.out.println("Поезд - " + train.getMarka() +
+                 ". Модель поезда - " + train.getModel() +
+                 ". Год выпуска - " + train.getYearOfProduction() +
+                 ". Страна производства - " + train.getCountryOfProduction() +
+                 ". Цвет - " + train.getColour() +
+                 ". Максимальная скорость - " + train.getMaxSpeed() + " км./ч" +
+                 ". Стоимость билета - " + train.getCostTrip() + " руб " +
+                 ". Время отправления - " + train.getTravelTime() +
+                 ". Станция отправления - " + train.getDepartureStations() +
+                 ". Станция назначения - " + train.getTerminalStation() +
+                 ". Количество вагонов в составе - " + train.getNumberWagons() + ".");
+
     }
+}
