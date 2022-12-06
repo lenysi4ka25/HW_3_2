@@ -9,7 +9,12 @@ public class Train extends Transport {
     public Train(String marka, String model, int yearOfProduction, String countryOfProduction, String colour,
                  int maxSpeed, int costTrip, String travelTime, String departureStations, String terminalStation, int numberWagons) {
         super();
-        if (costTrip <= 0) {
+        this.costTrip = costTrip;
+        this.travelTime = travelTime;
+        this.departureStations = departureStations;
+        this.terminalStation = terminalStation;
+        this.numberWagons = numberWagons;
+        /*if (costTrip <= 0) {
             this.costTrip = 15;
         } else {
             this.costTrip = costTrip;
@@ -33,7 +38,7 @@ public class Train extends Transport {
             this.numberWagons = 15;
         } else {
             this.numberWagons = numberWagons;
-        }
+        }*/
     }
 
     public int getCostTrip() {
