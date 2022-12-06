@@ -1,13 +1,21 @@
-public class Transport {
+public abstract class Transport {
 
-    private String marka;
-    private String model;
-    private final int yearOfProduction;
-    private final String countryOfProduction;
-    private String colour;
-    private int maxSpeed;
+    public String marka;
+    protected String model;
+    protected int yearOfProduction;
+    protected  String countryOfProduction;
+    protected String colour;
+    protected int maxSpeed;
 
-    public Transport(String marka, String model, int yearOfProduction, String countryOfProduction, String colour, int maxSpeed) {
+    public Transport() {
+       // public Transport(marka, model, yearOfProduction, countryOfProduction, colour, maxSpeed) {
+        /*this.marka = marka;
+        this.model = model;
+        this.yearOfProduction = yearOfProduction;
+        this.countryOfProduction = countryOfProduction;
+        this.colour = colour;
+        this.maxSpeed = maxSpeed;*/
+
         if (marka != null && !marka.isEmpty() && !marka.isBlank()) {
             this.marka = marka;
         } else {
@@ -31,6 +39,8 @@ public class Transport {
             this.maxSpeed = 0;
         }
     }
+    //}
+
 
     public int getYearOfProduction() {
         return yearOfProduction;
@@ -81,10 +91,11 @@ public class Transport {
     }
 
     public void setMaxSpeed(int maxSpeed) {
-        if (maxSpeed != 0) {
+        if (maxSpeed <= 0) {
             this.maxSpeed = maxSpeed;
         } else {
-            this.maxSpeed = 0;
+            this.maxSpeed = 200;
         }
     }
+    public abstract void refill();
 }
