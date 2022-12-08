@@ -5,14 +5,14 @@ public class Bus extends Transport {
     private int numberOfStops;
 
     public Bus(String marka, String model, int yearOfProduction, String countryOfProduction, String colour, int maxSpeed, int numberSeats, String arrivalTime, int numberOfStops) {
-        super();
+        super(yearOfProduction, countryOfProduction, maxSpeed);
         this.numberSeats = numberSeats;
         this.arrivalTime = arrivalTime;
         this.numberOfStops = numberOfStops;
     }
 
     public Bus(int numberSeats, String arrivalTime, int numberOfStops) {
-        super();
+        super(numberSeats, arrivalTime, numberOfStops);
         this.numberSeats = numberSeats;
         this.arrivalTime = arrivalTime;
         this.numberOfStops = numberOfStops;

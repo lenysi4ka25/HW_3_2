@@ -1,20 +1,13 @@
 public abstract class Transport {
 
-    public String marka;
-    protected String model;
-    protected int yearOfProduction;
-    protected  String countryOfProduction;
-    protected String colour;
-    protected int maxSpeed;
+    private String marka;
+    private String model;
+    private final int yearOfProduction;
+    private final String countryOfProduction;
+    private String colour;
+    private int maxSpeed;
 
-    public Transport() {
-       // public Transport(marka, model, yearOfProduction, countryOfProduction, colour, maxSpeed) {
-        /*this.marka = marka;
-        this.model = model;
-        this.yearOfProduction = yearOfProduction;
-        this.countryOfProduction = countryOfProduction;
-        this.colour = colour;
-        this.maxSpeed = maxSpeed;*/
+    protected Transport(int yearOfProduction, String countryOfProduction, int maxSpeed) {
 
         if (marka != null && !marka.isEmpty() && !marka.isBlank()) {
             this.marka = marka;

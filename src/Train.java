@@ -8,7 +8,7 @@ public class Train extends Transport {
 
     public Train(String marka, String model, int yearOfProduction, String countryOfProduction, String colour,
                  int maxSpeed, int costTrip, String travelTime, String departureStations, String terminalStation, int numberWagons) {
-        super();
+        super(yearOfProduction, countryOfProduction, maxSpeed);
         this.costTrip = costTrip;
         this.travelTime = travelTime;
         this.departureStations = departureStations;

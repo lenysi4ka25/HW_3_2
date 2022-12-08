@@ -1,8 +1,6 @@
 public class Main {
     public static void main(String[] args)
     {
-        /*Transport lada = new Transport ("Лада", "Ларгус", 2020, "Россия", "зеленый", 160);
-        Transport kia = new Transport("Киа", "Рио", 2020, "Южная Корея", null, 195);*/
         Car lada = new Car("Лада", "Ларгус", 2020, "Россия", "зеленый", 160);
         Car kia = new Car("Киа", "Рио", 2020, "Южная Корея", null, 195);
         Train lastochka = new Train("Ласточка", "В-901", 2001, "Россия", "красный", 301,
@@ -47,7 +45,7 @@ public class Main {
 
     public static void printInfoBus(Bus bus) {
         System.out.println("Количество мест - " + bus.getNumberSeats() +
-                ". Время в пути - " + bus.getArrivalTime() + " часов" +
+                ". Время в пути - " + bus.getArrivalTime() +
                 ". Количество остановок в пути - " + bus.getNumberOfStops() + ".");
     }
 }
